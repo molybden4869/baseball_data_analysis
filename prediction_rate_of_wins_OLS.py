@@ -25,7 +25,6 @@ test_data = pd.read_csv('prediction_rate_of_wins_test.csv', index_col=0)
 preprocessing_method = 1
  # 相関係数の閾値の設定
 threshold_of_r = 0.97
-
 deleting_variable_numbers_in_r = []
 
 
@@ -92,12 +91,12 @@ model.fit(autoscaled_x_train, autoscaled_y_train)
 standard_regression_coefficients = pd.DataFrame(model.coef_, index=x_train_new.columns,
                                                 columns=['standard_regression_coefficients'])
 
+
 # trainデータの予測
 estimated_y_train = pd.DataFrame(model.predict(autoscaled_x_train), index=x_train.index,
                                  columns=['estimated_y_train'])
 estimated_y_train = estimated_y_train * y_train.std() + y_train.mean()
 estimated_y_train.to_csv('estimated_y_train.csv')
-
 
 # yの実測値と予測値のプロット (y_train)
 plt.rcParams['font.size'] = 18
@@ -111,7 +110,6 @@ plt.ylim(y_min - 0.05 * (y_max - y_min), y_max + 0.05 * (y_max - y_min))
 plt.xlim(y_min - 0.05 * (y_max - y_min), y_max + 0.05 * (y_max - y_min))
 plt.xlabel('実際の勝率', fontname="MS Gothic")
 plt.ylabel('勝率の予測値', fontname="MS Gothic")
-
 
 # r2, RMSE, MAEの計算と保存
 r2_train = metrics.r2_score(y_train, estimated_y_train)
@@ -134,7 +132,6 @@ estimated_y_test = pd.DataFrame(model.predict(autoscaled_x_test), index=x_test.i
 estimated_y_test = estimated_y_test * y_train.std() + y_train.mean()
 estimated_y_test.to_csv('estimated_y_test.csv')
 
-
 # yの実測値と予測値のプロット (y_test)
 plt.rcParams['font.size'] = 18
 plt.figure(figsize = figure.figaspect(1))
@@ -147,7 +144,6 @@ plt.ylim(y_min - 0.05 * (y_max - y_min), y_max + 0.05 * (y_max - y_min))
 plt.xlim(y_min - 0.05 * (y_max - y_min), y_max + 0.05 * (y_max - y_min))
 plt.xlabel('2021年の実際の勝率', fontname="MS Gothic")
 plt.ylabel('2021年の予測された勝率', fontname="MS Gothic")
-
 
 # r2, RMSE, MAEの計算と保存
 r2_test = metrics.r2_score(y_test, estimated_y_test)
@@ -162,7 +158,4 @@ evaluation = pd.DataFrame(evaluation_index_test)
 evaluation.index = ['r2', 'RMSE', 'MAE']
 evaluation.columns = ['test']
 evaluation.to_csv('evaluation_test.csv')
-
-
-
 

@@ -1,1 +1,1 @@
-# baseball_data_analysis
+# 野球データ解析のコードです

@@ -4,14 +4,14 @@
 ・freak_scraping_teams_hitter.py
 ・freak_scraping_teams_pitcher.py
 
-解析用データの作成
+<p> 解析用データの作成 </p>
 ・create_dataset.py
 
-最適な回帰分析手法の検討
+<p> 最適な回帰分析手法の検討 </p>
 ・prediction_rate_of_wins_auto.py
 
-Elastic Netによるモデル構築と逆解析
+<p> Elastic Netによるモデル構築と逆解析 </p>
 ・EN_analysis.py
 
-ピタゴラス勝率による解析
+<p> ピタゴラス勝率による解析 </p>
 ・pythagorean_expectation.py

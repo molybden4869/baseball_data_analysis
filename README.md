@@ -1,6 +1,6 @@
 # 野球データ解析のコードです
 
-データの収集（スクレイピング）
+<p> データの収集（スクレイピング）</p>
 ・freak_scraping_teams_hitter.py
 ・freak_scraping_teams_pitcher.py
 
@@ -11,7 +11,7 @@
 ・prediction_rate_of_wins_auto.py
 
 Elastic Netによるモデル構築と逆解析
-EN_analysis.py
+・EN_analysis.py
 
 ピタゴラス勝率による解析
-pythagorean_expectation.py
+・pythagorean_expectation.py

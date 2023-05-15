@@ -1,17 +1,17 @@
 # 野球データ解析のコードです
 
-<p> データの収集（スクレイピング）</p>
-・freak_scraping_teams_hitter.py
-・freak_scraping_teams_pitcher.py
+<h3> データの収集（スクレイピング）</h3>
+<p> ・freak_scraping_teams_hitter.py </p>
+<p> ・freak_scraping_teams_pitcher.py </p>
 
-<p> 解析用データの作成 </p>
-・create_dataset.py
+<h3> 解析用データの作成 </h3>
+<p> ・create_dataset.py </p>
 
-<p> 最適な回帰分析手法の検討 </p>
-・prediction_rate_of_wins_auto.py
+<h3> 最適な回帰分析手法の検討 </h3>
+<p> ・prediction_rate_of_wins_auto.py </p>
 
-<p> Elastic Netによるモデル構築と逆解析 </p>
-・EN_analysis.py
+<h3> Elastic Netによるモデル構築と逆解析 </h3>
+<p> ・EN_analysis.py </p>
 
-<p> ピタゴラス勝率による解析 </p>
-・pythagorean_expectation.py
+<h3> ピタゴラス勝率による解析 </h3>
+</p> ・pythagorean_expectation.py </p>
